@@ -1,0 +1,1577 @@
+/*
+Theme Name:   Qrisetin Indonesia
+Description:  Custom Theme untuk qrisetin indonesia
+Author:       Alfiid Joko Rusmono, S.Kom.
+Author URI:   https://www.instagram.com/xone.zy/
+Version:      1.0
+*/
+
+
+/* --- Reset & Pengaturan Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Style Umum untuk Judul Section --- */
+.section-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.section-tag {
+    color: #e67e22; /* Oranye */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.section-title {
+    font-size: 20px;
+    color: #0056b3; /* Biru Tua */
+    margin-bottom: 30px;
+}
+
+
+/* --- Header Atas (Logo & Background) --- */
+.site-header {
+  background-image: url('img/BgHeader.svg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+}
+
+.site-branding img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* --- Navigasi Menu --- */
+.main-navigation {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: relative;
+}
+
+.main-navigation .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation a:hover {
+    color: #e67e22;
+    border-bottom: 2px solid #e67e22;
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN SEARCH ========= */
+/* =============================================== */
+
+
+/* --- Form Pencarian --- */
+.search-form {
+    position: relative; /* Diperlukan untuk memposisikan tombol ikon */
+}
+
+.search-field {
+    border: 1px solid #e0e0e0;
+    border-radius: 50px; /* Desain Rounded */
+    padding: 8px 40px 8px 15px; /* Padding kanan untuk ruang ikon */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Bayangan */
+    transition: border-color 0.3s ease;
+    width: 220px; /* Lebar default di desktop */
+}
+
+.search-field:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+.search-submit {
+    position: absolute; /* Posisikan ikon di dalam area input */
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0056b3;
+}
+
+.screen-reader-text { /* Sembunyikan label yang tidak perlu terlihat */
+    display: none;
+}
+
+
+
+/* --- Tombol Hamburger (Untuk Desktop) --- */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0056b3;
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN BERANDA ========= */
+/* =============================================== */
+
+/* --- Hero Section (Konten Utama) --- */
+.hero-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-illustration {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.welcome-text {
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 8px;
+    
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #666;
+    text-align: justify;
+}
+
+    /* --- Tombol CTA (Call to Action) --- */
+    .cta-button {
+        background-color: #fff;
+        border: 1px solid #e67e22;
+        color: #e67e22;
+        padding: 12px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e67e22;
+        color: #fff;
+    }
+
+    .cta-button .icon-headset {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #e67e22;
+        mask-image: url('img/Headshet1.svg');
+        -webkit-mask-image: url('img/Headshet1.svg');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+    }
+
+    .cta-button:hover .icon-headset {
+        background-color: #fff;
+    }
+
+
+/* --- Gelombang Dekorasi Pemisah --- */
+.decoration-wave {
+    height: 100px;
+    background-image: url('img/BgHome.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Section Layanan --- */
+.layanan-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.layanan-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.layanan-card:hover {
+    transform: translateY(-25px);
+}
+
+.layanan-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.layanan-title {
+    font-size: 18px;
+    color: #002d5c;
+    margin-bottom: 10px;
+}
+
+.layanan-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+/* --- Section Produk Terbaru (Format List) --- */
+.produk-section {
+    padding: 60px 0;
+    background-color: #f0f2f5;
+}
+
+.produk-list-item {
+    display: flex;
+    gap: 25px; /* Jarak antara gambar dan teks */
+    align-items: flex-start; /* PENTING: Membuat konten rata atas */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.3s ease;
+}
+
+.produk-list-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengunci lebar kolom gambar agar tidak berubah-ubah */
+.produk-list-cover {
+    flex: 0 0 80px; /* Lebar tetap 120px */
+}
+
+.produk-list-cover img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produk-list-details {
+    flex: 1; /* Ambil semua sisa ruang yang tersedia */
+}
+
+.produk-title {
+    font-size: 18px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.produk-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.produk-author {
+    font-size: 13px;
+    color: #888;
+    margin-top: 15px;
+    display: block;
+}
+/* --- Tombol di Bawah Section --- */
+.section-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-outline {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button-outline:hover {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+/* --- Section Statistik --- */
+.stats-section {
+    background-color: #f0f8ff;
+    padding: 50px 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #e67e22;
+}
+
+/* --- Section FAQ --- */
+.faq-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.faq-section .section-header {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item[open] {
+    background-color: #f0f8ff;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0056b3;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+details[open] > .faq-question .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px 15px 20px;
+    line-height: 1.7;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Section Sertifikat --- */
+.sertifikat-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Latar abu-abu muda */
+    text-align: center; /* Membuat semua konten di dalamnya menjadi di tengah */
+}
+
+.sertifikat-title {
+    font-size: 28px;
+    color: #0056b3; /* Warna biru */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sertifikat-image img {
+    max-width: 100%; /* Agar responsif */
+    height: auto;
+    max-width: 800px; /* Batasi lebar maksimal di layar besar */
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Efek bayangan agar terlihat 'mengambang' */
+}
+
+/* --- Section Lomba --- */
+.lomba-section {
+    padding: 80px 0;
+    background-image: url('img/bgtulis.svg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+.lomba-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tengahkan item secara horizontal */
+    gap: 30px; /* Jarak antara gambar dan tombol */
+}
+
+.lomba-image {
+    max-width: 250px; /* Sesuaikan ukuran gambar lomba */
+    height: auto;
+}
+
+/* --- Tombol Outline Biru (opsional, jika ingin tombol berbeda) --- */
+.button-outline-blue {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid #e67e22; /* Warna biru */
+    color: #e67e22; /* Warna teks biru */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: #fff; /* Latar putih untuk tombol */
+}
+
+.button-outline-blue:hover {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+/* --- Section CTA (Call to Action) --- */
+.cta-section {
+    padding: 60px 0;
+    background-image: url('img/bgkonsultasi.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-text h2 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #e0e0e0; /* Putih sedikit redup */
+}
+
+.button-cta-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #e67e22; /* Teks biru */
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e67e22; /* Warna biru */
+}
+
+.button-cta-solid:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Footer Baru --- */
+.footer-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 40px 0; /* Ubah padding vertikal, nol-kan horizontal */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    margin: 40px 0; /* Beri jarak atas bawah dari section lain */
+}
+
+.footer-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.footer-grid-new {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; /* Kolom kiri & kanan lebih lebar */
+    gap: 100px;
+    align-items: center;
+}
+
+/* Kolom 1: Info */
+.footer-col-about .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+.footer-col-about .footer-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.footer-col-about .footer-contact {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.footer-col-about .social-icons {
+    margin-top: 20px;
+}
+
+/* Kolom 2: Lokasi */
+.footer-col-location {
+    text-align: center;
+    margin-top: 30px;
+}
+.footer-col-location .location-icon {
+    font-size: 28px;
+    color: #002d5c;
+    margin-bottom: 10px;
+}
+.footer-col-location h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.footer-col-location p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Kolom 3: Peta */
+.footer-col-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Bagian Copyright */
+.footer-bottom-new {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #888;
+}
+/* Menggunakan kembali style .icon-headset yang sudah ada */
+.button-cta-solid .icon-headset {
+    background-color: #0056b3; /* Warna ikon biru */
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN LOMBA ========= */
+/* =============================================== */
+
+/* --- Halaman Lomba Berakhir --- */
+.event-ended-content {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.event-ended-content p {
+    color: #666;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.event-ended-content img {
+    max-width: 100%;
+    max-height: 400px; /* Batasi tinggi gambar agar tidak terlalu besar */
+    height: auto;
+    margin-bottom: -80px;
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN PRODUK ========= */
+/* =============================================== */
+
+/* --- Halaman Produk --- */
+.page-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.produk-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom dengan lebar sama */
+    gap: 30px;
+}
+
+.produk-card-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produk-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.produk-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+
+}
+
+.produk-card-header h2 {
+    font-size: 22px;
+    color: #0056b3;
+}
+
+.produk-card-illustration {
+    max-width: 280px;
+    margin: 20px auto;
+}
+
+.produk-card-item p {
+    color: #666;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Mendorong tombol ke bawah */
+}
+
+.produk-card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Agar tombol turun ke bawah jika tidak muat */
+}
+
+.button-primary, .button-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.button-primary {
+    background-color: #0056b3;
+    color: #fff;
+    border: 1px solid #0056b3;
+}
+.button-primary:hover {
+    background-color: #003d82;
+}
+
+.button-secondary {
+    background-color: #fff;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+}
+.button-secondary:hover {
+    background-color: #f0f8ff;
+}
+
+/* --- Dropdown Kategori --- */
+.kategori-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden; /* Agar link di dalamnya ikut melengkung */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tampilkan dropdown saat di-hover */
+.kategori-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Halaman Arsip Kategori --- */
+.archive-header {
+    margin-bottom: 40px;
+}
+.archive-header h1 {
+    font-size: 28px;
+    color: #0056b3;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*!! TAMBAHKAN KODE INI UNTUK MEMPERBAIKI LINK JUDUL !!*/
+.buku-title a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #0056b3;       /* Menyamakan warna dengan judul lain */
+}
+
+/* =============================================== */
+/* === KODE UNTUK TAMPILAN PRODUK HOME JURNAL ==== */
+/* =============================================== */
+
+/* --- Halaman Jurnal --- */
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+.jurnal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Jarak antara kartu */
+    max-width: 800px; /* Batasi lebar maksimal kartu di sini */
+    margin: 0 auto;   /* Posisikan di tengah halaman */
+}
+
+.jurnal-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.jurnal-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Melengkungkan sudut banner di dalam kartu */
+    margin-bottom: 20px;
+}
+
+/* =============================================== */
+/* ====== KODE UNTUK TAMPILAN TENTANG KAMI ======= */
+/* =============================================== */
+
+/* --- Halaman Tentang Kami --- */
+
+.profil-image img {
+    max-width: 95%; /* Atur ukuran gambar menjadi 85% dari lebar kolomnya */
+    height: auto;
+    display: block; /* Diperlukan agar margin auto berfungsi */
+    margin: 0 auto; /* Membuat gambar berada di tengah kolomnya */
+}
+
+.page-tentang-kami .page-padding {
+    padding-top: 40px;
+}
+
+/* Utility Class Tambahan */
+.text-center {
+    text-align: center;
+}
+
+/* Section Profil */
+.profil-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+.profil-text p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Section Perbukuan */
+.perbukuan-section {
+    padding: 40px 0;
+    background-color: #f0f8ff; /* Latar biru sangat muda */
+}
+.perbukuan-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Teks lebih lebar */
+    gap: 30px;
+    align-items: center;
+}
+.perbukuan-text p {
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+}
+
+/* --- Section Our Team  --- */
+.team-section {
+    padding: 40px 0 60px 0; /* Jarak atas dikurangi, jarak bawah ditambah */
+}
+
+/* Tambahkan aturan ini untuk memberi jarak di bawah judul "Our Team" */
+.team-section .section-title {
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-card-simple {
+    display: flex;
+    flex-direction: column; /* Susun item ke bawah */
+    align-items: center;   /* Posisikan semua item di tengah */
+    gap: 15px;             /* Beri jarak antara gambar dan teks */
+}
+
+.team-card-simple img {
+    width: 140px; /* Sesuaikan ukuran ikon */
+    height: 140px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-card-simple:hover img {
+    transform: scale(1.2); /* Sedikit membesar saat di-hover */
+}
+
+.team-card-simple span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e67e22; /* Warna teks oranye */
+    white-space: nowrap;
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK KIRIM NASKAH ========= */
+/* =============================================== */
+
+/* --- Halaman Kirim Naskah --- */
+
+/* Hero Section */
+.naskah-hero-section { padding: 5px 0; text-align: justify; }
+.naskah-hero-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
+.naskah-hero-text p { line-height: 1.8; color: #666; }
+
+/*!! TAMBAHKAN KODE INI UNTUK MEMBUAT EFEK TUMPUKAN !!*/
+.naskah-hero-image {
+    position: relative;
+    bottom: -40px; /* Nilai ini bisa disesuaikan, untuk mengangkat gambar sedikit */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0; /* Menarik section di bawahnya naik ke atas */
+}
+/* Template Section */
+.template-section { 
+    padding: 60px 0; 
+    background-color: #ffffff; /* Kembalikan background biru */
+}
+.template-title { 
+    color: #EB6727; /* Ubah warna judul menjadi putih */
+    text-align: center; 
+    font-size: 32px; 
+    margin-bottom: 30px; 
+}
+.template-cards { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+}
+.template-card { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    background-color: #fff; /* Kartu tetap putih */
+    padding: 20px 25px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    color: inherit; 
+    transition: transform 0.3s ease; 
+    border: 4px solid #0056b3; /* Pertebal border dengan warna biru lebih tua */
+}
+.template-card:hover { 
+    transform: translateY(-15px); 
+}
+.template-card img { 
+    width: 40px; 
+}
+.template-card h3 { 
+    color: #e67e22; /* Ubah warna judul template menjadi oranye */
+    font-size: 18px; 
+    font-weight: bold;
+}
+.template-card span { 
+    color: #666; 
+    font-size: 14px; 
+}
+
+/* Alur Section */
+.alur-section { padding: 60px 0; background-color: #E9F4FF; }
+
+/* Info Naskah Section */
+.info-naskah-section { padding: 60px 0; }
+.info-naskah-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.info-naskah-col h4 { font-size: 18px; color: #002d5c; margin-bottom: 15px; }
+.info-naskah-col ol { padding-left: 20px; }
+.info-naskah-col li { margin-bottom: 10px; line-height: 1.7; color: #666; }
+.info-naskah-cta { text-align: center; max-width: 700px; margin: 0 auto; }
+.info-naskah-cta h4 { font-size: 18px; color: #002d5c; margin-bottom: 10px; }
+.info-naskah-cta p { color: #666; line-height: 1.7; }
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN KONTAK ========= */
+/* =============================================== */
+
+
+/* --- Halaman Kontak --- */
+.kontak-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom sama lebar */
+    gap: 40px;
+    align-items: center;
+}
+
+.kontak-title {
+    font-size: 32px;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.kontak-info p {
+    line-height: 1.8;
+    color: #666;
+}
+
+.kontak-social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.kontak-social-icons img {
+    width: 60px; /* Ukuran ikon sosial media */
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.kontak-social-icons a:hover img {
+    transform: scale(1.1); /* Efek membesar saat di-hover */
+}
+
+.kontak-alamat img {
+    width: 100%;
+    height: auto;
+}
+
+/* =============================================== */
+/* ======== KODE UNTUK TAMPILAN HOME BUKU ======== */   
+/* =============================================== */
+
+/* --- Halaman Home Buku --- */
+.buku-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di desktop */
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.buku-card {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    align-items: flex-start; /* Konten rata atas */
+}
+
+.buku-cover {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buku-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.buku-title {
+    font-size: 16px;
+    color: #002d5c;
+    margin-bottom: 10px;
+}
+
+.buku-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1; /* Mendorong tombol ke bawah */
+}
+
+.button-selengkapnya {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px; /* Jarak dari deskripsi */
+    align-self: flex-start; /* Tombol rata kiri */
+    transition: background-color 0.3s ease;
+}
+.button-selengkapnya:hover {
+    background-color: #003d82;
+}
+
+/* --- Pagination --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.page-link {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #0056b3;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.page-link:hover,
+.page-link.active {
+    background-color: #2A3FFF;
+    color: #fff;
+    border-color: #2A3FFF;
+}
+
+/* =============================================== */
+/* ====== KODE UNTUK TAMPILAN DETAIL BUKU ======== */
+/* =============================================== */
+
+/* --- Halaman Detail Buku --- */
+.detail-buku-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.detail-buku-cover, 
+.detail-buku-info {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* Hapus bayangan dari gambar karena kartunya sudah punya bayangan */
+.detail-buku-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* <-- Radius di ujung gambar tetap ada */
+}
+
+.detail-buku-info h1 {
+    font-size: 28px;
+    color: #0056b3;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.purchase-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.purchase-icons a {
+    display: flex;
+    align-items: start;
+    align-items: center;  
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ffe8d6;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    position: relative; /* <-- Tambahkan ini agar z-index berfungsi */
+    z-index: 2;   
+}
+
+.purchase-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.purchase-icons a img {
+    width: 28px;
+    height: 28px;
+}
+
+.book-meta-section {
+    margin-bottom: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.book-meta-section h4 {
+    font-size: 16px;
+    color: #0056b3;
+    margin-bottom: 10px;
+    
+}
+
+.book-meta-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN LAYANAN ======== */
+/* =============================================== */
+
+
+/* --- Halaman Layanan --- */
+.layanan-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Jarak antar kartu */
+}
+
+.layanan-item-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Gambar 1 bagian, Teks 2 bagian */
+    gap: 30px;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.layanan-item-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.layanan-item-details h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.layanan-item-details p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* =============================================== */
+/* ======== KODE UNTUK TAMPILAN HOME HKI ========= */
+/* =============================================== */
+
+/* --- Halaman HKI --- */
+.hki-hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 60px;
+}
+.hki-hero-text h2 {
+    font-size: 28px;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+.hki-hero-text p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.manfaat-hki-section {
+    padding: 5 px 0;
+}
+.manfaat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.manfaat-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+.manfaat-number {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+.manfaat-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+/* =============================================== */
+/* ====== KODE UNTUK TAMPILAN PAKET PENERBIT ===== */
+/* =============================================== */
+
+/* --- Halaman Paket Penerbitan Jurnal --- */
+.paket-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di desktop */
+    gap: 60px;
+}
+
+.paket-card {
+    border-radius: 25px;
+    overflow: hidden; /* Penting agar gambar tidak keluar dari border-radius */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+}
+
+.paket-card:hover {
+    transform: translateY(-20px); 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.paket-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+/* =============================================== */
+/* ========== KODE UNTUK TAMPILAN MOBILE ========= */
+/* =============================================== */
+
+@media (max-width: 768px) {
+
+    /* --- Pengaturan Global di Mobile --- */
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .section-title, .sertifikat-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* --- Pengaturan Navigasi Mobile --- */
+    .main-navigation .container {
+        justify-content: space-between;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .main-navigation ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .main-navigation.menu-open ul {
+        display: flex;
+    }
+
+    .main-navigation ul a {
+        padding-left: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- Perbaikan Hero Section di Mobile --- */
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+        
+    }
+
+    .hero-illustration {
+        text-align: center;
+        order: -1;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    /* --- Perbaikan Section Layanan di Mobile --- */
+    .layanan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*!! INI ADALAH PERBAIKAN UNTUK PRODUK TERKINI !!*/
+    .produk-list-item {
+        align-items: flex-start; /* Memastikan teks dan gambar rata atas */
+    }
+    
+    .produk-list-cover {
+        flex: 0 0 90px; /* Mengunci lebar kolom gambar agar tidak lebih dari 100px */
+    }
+
+    /* --- Perbaikan Section Statistik di Mobile --- */
+    .stats-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    /* --- Perbaikan Section FAQ di Mobile --- */
+    .faq-question {
+        font-size: 16px;
+    }
+
+    /* --- Perbaikan Section CTA di Mobile --- */
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-text h2 {
+        font-size: 28px;
+    }
+    
+    /* --- Perbaikan Footer di Mobile --- */
+    .footer-grid-new {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col-about .footer-logo,
+    .footer-col-about .social-icons {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    /* --- Perbaikan Halaman Produk di Mobile --- */
+    .produk-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Perbaikan Halaman Tentang Kami di Mobile --- */
+    .profil-content,
+    .perbukuan-content {
+        grid-template-columns: 1fr;
+    }
+    .profil-image { order: -1; }
+    .profil-text p, .perbukuan-text p { text-align: left; }
+    .perbukuan-image { text-align: center; margin-bottom: 20px; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+
+    /* --- Perbaikan Halaman Kirim Naskah di Mobile --- */
+    .naskah-hero-content, .info-naskah-grid { grid-template-columns: 1fr; }
+    .naskah-hero-image { order: -1; text-align: center; }
+    .naskah-hero-text { text-align: left; }
+    .info-naskah-grid { gap: 40px; }
+
+    /* --- Perbaikan Halaman Kontak di Mobile --- */
+    .kontak-grid { grid-template-columns: 1fr; }
+    .kontak-info { text-align: center; }
+    .kontak-social-icons { justify-content: center; }
+
+    /* --- Perbaikan Halaman Buku di Mobile --- */
+    .buku-grid { grid-template-columns: 1fr; }
+
+    /* --- Perbaikan Halaman Detail Buku di Mobile --- */
+    .detail-buku-layout { grid-template-columns: 1fr; }
+
+    /* --- Perbaikan Halaman Layanan di Mobile --- */
+    .layanan-item-card { grid-template-columns: 1fr; text-align: justify; }
+    .layanan-item-details .button-outline { margin: 0 auto; }
+
+    .hki-hero-section {
+        grid-template-columns: 1fr; /* Susun menjadi 1 kolom */
+        text-align: center; /* <-- TAMBAHKAN BARIS INI */
+    }
+    .manfaat-grid {
+        grid-template-columns: 1fr;
+    }
+        /* --- Pengaturan Navigasi Mobile --- */
+    .main-navigation .container {
+        justify-content: space-between;
+        flex-direction: row; /* PENTING: Pastikan tetap berbaris ke samping */
+    }
+    
+    /* --- Perbaikan Form Pencarian di Mobile --- */
+        .header-search {
+        /* Biarkan wadah search mengambil sisa ruang di kanan */
+        flex-grow: 1;
+        margin-left: 15px; /* Beri jarak dari menu hamburger */
+    }
+
+    .search-form {
+        width: 100%; /* Isi penuh wadahnya */
+    }
+
+    .search-field {
+        width: 100%; /* Pastikan input field mengisi penuh form */
+        font-size: 14px; /* Kecilkan font agar pas */
+    }
+ 
+}
