@@ -190,4 +190,23 @@ function qriset_flush_rewrite_on_activation() {
 }
 add_action( 'after_switch_theme', 'qriset_flush_rewrite_on_activation' );
 
+/**
+ * Mendaftarkan Service Worker untuk fungsionalitas offline.
+ */
+function qriset_register_service_worker() {
+    ?>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('<?php echo get_template_directory_uri(); ?>/sw.js')
+                .then(function(registration) {
+                    console.log('Service Worker berhasil didaftarkan dengan scope:', registration.scope);
+                }).catch(function(error) {
+                    console.log('Pendaftaran Service Worker gagal:', error);
+                });
+        }
+    </script>
+    <?php
+}
+add_action('wp_footer', 'qriset_register_service_worker');
+
 ?>
